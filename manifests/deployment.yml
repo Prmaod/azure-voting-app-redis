@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: prmaodazurevotingappredis 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: prmaodazurevotingappredis 
+    spec:
+      containers:
+        - name: prmaodazurevotingappredis 
+          image: pramacr.azurecr.io/prmaodazurevotingappredis
+          ports:
+          - containerPort: 80
